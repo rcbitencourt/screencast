@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/components/webDevTec/webDevTec.service.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../../prettify.css">
+    <link rel="stylesheet" href="../../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header low">
+    <h1>Code coverage report for <span class="entity">app/components/webDevTec/webDevTec.service.js</span></h1>
+    <h2>
+        Statements: <span class="metric">28.57% <small>(2 / 7)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">100% <small>(0 / 0)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">33.33% <small>(1 / 3)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">28.57% <small>(2 / 7)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">app/components/webDevTec/</a> &#187; webDevTec.service.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function() {
+  angular.module("screencast").service("webDevTec", <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >    var data, getTec;</span>
+<span class="cstat-no" title="statement not covered" >    data = [</span>
+      {
+        'title': 'AngularJS',
+        'url': 'https://angularjs.org/',
+        'description': 'HTML enhanced for web apps!',
+        'logo': 'angular.png'
+      }, {
+        'title': 'BrowserSync',
+        'url': 'http://browsersync.io/',
+        'description': 'Time-saving synchronised browser testing.',
+        'logo': 'browsersync.png'
+      }, {
+        'title': 'GulpJS',
+        'url': 'http://gulpjs.com/',
+        'description': 'The streaming build system.',
+        'logo': 'gulp.png'
+      }, {
+        'title': 'Jasmine',
+        'url': 'http://jasmine.github.io/',
+        'description': 'Behavior-Driven JavaScript.',
+        'logo': 'jasmine.png'
+      }, {
+        'title': 'Karma',
+        'url': 'http://karma-runner.github.io/',
+        'description': 'Spectacular Test Runner for JavaScript.',
+        'logo': 'karma.png'
+      }, {
+        'title': 'Protractor',
+        'url': 'https://github.com/angular/protractor',
+        'description': 'End to end test framework for AngularJS applications built on top of WebDriverJS.',
+        'logo': 'protractor.png'
+      }, {
+        'title': 'Bootstrap',
+        'url': 'http://getbootstrap.com/',
+        'description': 'Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web.',
+        'logo': 'bootstrap.png'
+      }, {
+        'title': 'Angular UI Bootstrap',
+        'url': 'http://angular-ui.github.io/bootstrap/',
+        'description': 'Bootstrap components written in pure AngularJS by the AngularUI Team.',
+        'logo': 'ui-bootstrap.png'
+      }, {
+        'title': 'Sass (Node)',
+        'url': 'https://github.com/sass/node-sass',
+        'description': 'Node.js binding to libsass, the C version of the popular stylesheet preprocessor, Sass.',
+        'logo': 'node-sass.png'
+      }, {
+        'title': 'CoffeeScript',
+        'url': 'http://coffeescript.org/',
+        'description': 'CoffeeScript, \'a little language that compiles into JavaScript\'.',
+        'logo': 'coffeescript.png'
+      }
+    ];
+<span class="cstat-no" title="statement not covered" >    getTec = <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >      return data;</span>
+    };
+<span class="cstat-no" title="statement not covered" >    this.getTec = getTec;</span>
+  });
+&nbsp;
+}).call(this);
+&nbsp;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBvbmVudHMvd2ViRGV2VGVjL3dlYkRldlRlYy5zZXJ2aWNlLmNvZmZlZSJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUFBLE9BQU8sQ0FBQyxNQUFSLENBQWUsWUFBZixDQUNFLENBQUMsT0FESCxDQUNXLFdBRFgsRUFDd0IsU0FBQTtBQUNwQixRQUFBO0lBQUEsSUFBQSxHQUFPO01BQ0w7UUFDRSxPQUFBLEVBQVMsV0FEWDtRQUVFLEtBQUEsRUFBTyx3QkFGVDtRQUdFLGFBQUEsRUFBZSw2QkFIakI7UUFJRSxNQUFBLEVBQVEsYUFKVjtPQURLLEVBT0w7UUFDRSxPQUFBLEVBQVMsYUFEWDtRQUVFLEtBQUEsRUFBTyx3QkFGVDtRQUdFLGFBQUEsRUFBZSwyQ0FIakI7UUFJRSxNQUFBLEVBQVEsaUJBSlY7T0FQSyxFQWFMO1FBQ0UsT0FBQSxFQUFTLFFBRFg7UUFFRSxLQUFBLEVBQU8sb0JBRlQ7UUFHRSxhQUFBLEVBQWUsNkJBSGpCO1FBSUUsTUFBQSxFQUFRLFVBSlY7T0FiSyxFQW1CTDtRQUNFLE9BQUEsRUFBUyxTQURYO1FBRUUsS0FBQSxFQUFPLDJCQUZUO1FBR0UsYUFBQSxFQUFlLDZCQUhqQjtRQUlFLE1BQUEsRUFBUSxhQUpWO09BbkJLLEVBeUJMO1FBQ0UsT0FBQSxFQUFTLE9BRFg7UUFFRSxLQUFBLEVBQU8sZ0NBRlQ7UUFHRSxhQUFBLEVBQWUseUNBSGpCO1FBSUUsTUFBQSxFQUFRLFdBSlY7T0F6QkssRUErQkw7UUFDRSxPQUFBLEVBQVMsWUFEWDtRQUVFLEtBQUEsRUFBTyx1Q0FGVDtRQUdFLGFBQUEsRUFBZSxtRkFIakI7UUFJRSxNQUFBLEVBQVEsZ0JBSlY7T0EvQkssRUFxQ0w7UUFDRSxPQUFBLEVBQVMsV0FEWDtRQUVFLEtBQUEsRUFBTywwQkFGVDtRQUdFLGFBQUEsRUFBZSx3SEFIakI7UUFJRSxNQUFBLEVBQVEsZUFKVjtPQXJDSyxFQTJDTDtRQUNFLE9BQUEsRUFBUyxzQkFEWDtRQUVFLEtBQUEsRUFBTyx3Q0FGVDtRQUdFLGFBQUEsRUFBZSx1RUFIakI7UUFJRSxNQUFBLEVBQVEsa0JBSlY7T0EzQ0ssRUFpREw7UUFDRSxPQUFBLEVBQVMsYUFEWDtRQUVFLEtBQUEsRUFBTyxtQ0FGVDtRQUdFLGFBQUEsRUFBZSx5RkFIakI7UUFJRSxNQUFBLEVBQVEsZUFKVjtPQWpESyxFQXVETDtRQUNFLE9BQUEsRUFBUyxjQURYO1FBRUUsS0FBQSxFQUFPLDBCQUZUO1FBR0UsYUFBQSxFQUFlLG9FQUhqQjtRQUlFLE1BQUEsRUFBUSxrQkFKVjtPQXZESzs7SUErRFAsTUFBQSxHQUFTLFNBQUE7YUFDUDtJQURPO0lBR1QsSUFBQyxDQUFBLE1BQUQsR0FBVTtFQW5FVSxDQUR4QjtBQUFBIiwiZmlsZSI6ImNvbXBvbmVudHMvd2ViRGV2VGVjL3dlYkRldlRlYy5zZXJ2aWNlLmpzIiwic291cmNlUm9vdCI6Ii9zb3VyY2UvIiwic291cmNlc0NvbnRlbnQiOlsiYW5ndWxhci5tb2R1bGUgXCJzY3JlZW5jYXN0XCJcbiAgLnNlcnZpY2UgXCJ3ZWJEZXZUZWNcIiwgKCkgLT5cbiAgICBkYXRhID0gW1xuICAgICAge1xuICAgICAgICAndGl0bGUnOiAnQW5ndWxhckpTJyxcbiAgICAgICAgJ3VybCc6ICdodHRwczovL2FuZ3VsYXJqcy5vcmcvJyxcbiAgICAgICAgJ2Rlc2NyaXB0aW9uJzogJ0hUTUwgZW5oYW5jZWQgZm9yIHdlYiBhcHBzIScsXG4gICAgICAgICdsb2dvJzogJ2FuZ3VsYXIucG5nJ1xuICAgICAgfSxcbiAgICAgIHtcbiAgICAgICAgJ3RpdGxlJzogJ0Jyb3dzZXJTeW5jJyxcbiAgICAgICAgJ3VybCc6ICdodHRwOi8vYnJvd3NlcnN5bmMuaW8vJyxcbiAgICAgICAgJ2Rlc2NyaXB0aW9uJzogJ1RpbWUtc2F2aW5nIHN5bmNocm9uaXNlZCBicm93c2VyIHRlc3RpbmcuJyxcbiAgICAgICAgJ2xvZ28nOiAnYnJvd3NlcnN5bmMucG5nJ1xuICAgICAgfSxcbiAgICAgIHtcbiAgICAgICAgJ3RpdGxlJzogJ0d1bHBKUycsXG4gICAgICAgICd1cmwnOiAnaHR0cDovL2d1bHBqcy5jb20vJyxcbiAgICAgICAgJ2Rlc2NyaXB0aW9uJzogJ1RoZSBzdHJlYW1pbmcgYnVpbGQgc3lzdGVtLicsXG4gICAgICAgICdsb2dvJzogJ2d1bHAucG5nJ1xuICAgICAgfSxcbiAgICAgIHtcbiAgICAgICAgJ3RpdGxlJzogJ0phc21pbmUnLFxuICAgICAgICAndXJsJzogJ2h0dHA6Ly9qYXNtaW5lLmdpdGh1Yi5pby8nLFxuICAgICAgICAnZGVzY3JpcHRpb24nOiAnQmVoYXZpb3ItRHJpdmVuIEphdmFTY3JpcHQuJyxcbiAgICAgICAgJ2xvZ28nOiAnamFzbWluZS5wbmcnXG4gICAgICB9LFxuICAgICAge1xuICAgICAgICAndGl0bGUnOiAnS2FybWEnLFxuICAgICAgICAndXJsJzogJ2h0dHA6Ly9rYXJtYS1ydW5uZXIuZ2l0aHViLmlvLycsXG4gICAgICAgICdkZXNjcmlwdGlvbic6ICdTcGVjdGFjdWxhciBUZXN0IFJ1bm5lciBmb3IgSmF2YVNjcmlwdC4nLFxuICAgICAgICAnbG9nbyc6ICdrYXJtYS5wbmcnXG4gICAgICB9LFxuICAgICAge1xuICAgICAgICAndGl0bGUnOiAnUHJvdHJhY3RvcicsXG4gICAgICAgICd1cmwnOiAnaHR0cHM6Ly9naXRodWIuY29tL2FuZ3VsYXIvcHJvdHJhY3RvcicsXG4gICAgICAgICdkZXNjcmlwdGlvbic6ICdFbmQgdG8gZW5kIHRlc3QgZnJhbWV3b3JrIGZvciBBbmd1bGFySlMgYXBwbGljYXRpb25zIGJ1aWx0IG9uIHRvcCBvZiBXZWJEcml2ZXJKUy4nLFxuICAgICAgICAnbG9nbyc6ICdwcm90cmFjdG9yLnBuZydcbiAgICAgIH0sXG4gICAgICB7XG4gICAgICAgICd0aXRsZSc6ICdCb290c3RyYXAnLFxuICAgICAgICAndXJsJzogJ2h0dHA6Ly9nZXRib290c3RyYXAuY29tLycsXG4gICAgICAgICdkZXNjcmlwdGlvbic6ICdCb290c3RyYXAgaXMgdGhlIG1vc3QgcG9wdWxhciBIVE1MLCBDU1MsIGFuZCBKUyBmcmFtZXdvcmsgZm9yIGRldmVsb3BpbmcgcmVzcG9uc2l2ZSwgbW9iaWxlIGZpcnN0IHByb2plY3RzIG9uIHRoZSB3ZWIuJyxcbiAgICAgICAgJ2xvZ28nOiAnYm9vdHN0cmFwLnBuZydcbiAgICAgIH0sXG4gICAgICB7XG4gICAgICAgICd0aXRsZSc6ICdBbmd1bGFyIFVJIEJvb3RzdHJhcCcsXG4gICAgICAgICd1cmwnOiAnaHR0cDovL2FuZ3VsYXItdWkuZ2l0aHViLmlvL2Jvb3RzdHJhcC8nLFxuICAgICAgICAnZGVzY3JpcHRpb24nOiAnQm9vdHN0cmFwIGNvbXBvbmVudHMgd3JpdHRlbiBpbiBwdXJlIEFuZ3VsYXJKUyBieSB0aGUgQW5ndWxhclVJIFRlYW0uJyxcbiAgICAgICAgJ2xvZ28nOiAndWktYm9vdHN0cmFwLnBuZydcbiAgICAgIH0sXG4gICAgICB7XG4gICAgICAgICd0aXRsZSc6ICdTYXNzIChOb2RlKScsXG4gICAgICAgICd1cmwnOiAnaHR0cHM6Ly9naXRodWIuY29tL3Nhc3Mvbm9kZS1zYXNzJyxcbiAgICAgICAgJ2Rlc2NyaXB0aW9uJzogJ05vZGUuanMgYmluZGluZyB0byBsaWJzYXNzLCB0aGUgQyB2ZXJzaW9uIG9mIHRoZSBwb3B1bGFyIHN0eWxlc2hlZXQgcHJlcHJvY2Vzc29yLCBTYXNzLicsXG4gICAgICAgICdsb2dvJzogJ25vZGUtc2Fzcy5wbmcnXG4gICAgICB9LFxuICAgICAge1xuICAgICAgICAndGl0bGUnOiAnQ29mZmVlU2NyaXB0JyxcbiAgICAgICAgJ3VybCc6ICdodHRwOi8vY29mZmVlc2NyaXB0Lm9yZy8nLFxuICAgICAgICAnZGVzY3JpcHRpb24nOiAnQ29mZmVlU2NyaXB0LCBcXCdhIGxpdHRsZSBsYW5ndWFnZSB0aGF0IGNvbXBpbGVzIGludG8gSmF2YVNjcmlwdFxcJy4nLFxuICAgICAgICAnbG9nbyc6ICdjb2ZmZWVzY3JpcHQucG5nJ1xuICAgICAgfVxuICAgIF1cblxuICAgIGdldFRlYyA9IC0+XG4gICAgICBkYXRhXG5cbiAgICBAZ2V0VGVjID0gZ2V0VGVjXG4gICAgcmV0dXJuXG4iXX0=</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Oct 01 2015 18:38:06 GMT-0300 (BRT)</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

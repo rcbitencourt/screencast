@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/components/githubContributor/githubContributor.service.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../../prettify.css">
+    <link rel="stylesheet" href="../../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header low">
+    <h1>Code coverage report for <span class="entity">app/components/githubContributor/githubContributor.service.js</span></h1>
+    <h2>
+        Statements: <span class="metric">14.29% <small>(2 / 14)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">0% <small>(0 / 2)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">20% <small>(1 / 5)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">14.29% <small>(2 / 14)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">app/components/githubContributor/</a> &#187; githubContributor.service.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function() {
+  angular.module("screencast").factory('githubContributor', <span class="fstat-no" title="function not covered" >function($log, $http) {</span>
+<span class="cstat-no" title="statement not covered" >    var apiHost, getContributors, service;</span>
+<span class="cstat-no" title="statement not covered" >    apiHost = 'https://api.github.com/repos/Swiip/generator-gulp-angular';</span>
+<span class="cstat-no" title="statement not covered" >    getContributors = <span class="fstat-no" title="function not covered" >function(limit) {</span></span>
+<span class="cstat-no" title="statement not covered" >      var getContributorsComplete, getContributorsFailed;</span>
+<span class="cstat-no" title="statement not covered" >      getContributorsComplete = <span class="fstat-no" title="function not covered" >function(response) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return response.data;</span>
+      };
+<span class="cstat-no" title="statement not covered" >      getContributorsFailed = <span class="fstat-no" title="function not covered" >function(error) {</span></span>
+<span class="cstat-no" title="statement not covered" >        $log.error('XHR Failed for getContributors.\n' + angular.toJson(error.data, true));</span>
+      };
+<span class="cstat-no" title="statement not covered" >      if (!limit) {</span>
+<span class="cstat-no" title="statement not covered" >        limit = 30;</span>
+      }
+<span class="cstat-no" title="statement not covered" >      return $http.get(apiHost + '/contributors?per_page=' + limit).then(getContributorsComplete)["catch"](getContributorsFailed);</span>
+    };
+<span class="cstat-no" title="statement not covered" >    return service = {</span>
+      apiHost: apiHost,
+      getContributors: getContributors
+    };
+  });
+&nbsp;
+}).call(this);
+&nbsp;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBvbmVudHMvZ2l0aHViQ29udHJpYnV0b3IvZ2l0aHViQ29udHJpYnV0b3Iuc2VydmljZS5jb2ZmZWUiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFBQSxPQUFPLENBQUMsTUFBUixDQUFlLFlBQWYsQ0FDRSxDQUFDLE9BREgsQ0FDVyxtQkFEWCxFQUNnQyxTQUFDLElBQUQsRUFBTyxLQUFQO0FBQzVCLFFBQUE7SUFBQSxPQUFBLEdBQVU7SUFFVixlQUFBLEdBQWtCLFNBQUMsS0FBRDtBQUVoQixVQUFBO01BQUEsdUJBQUEsR0FBMEIsU0FBQyxRQUFEO2VBQ3hCLFFBQVEsQ0FBQztNQURlO01BRzFCLHFCQUFBLEdBQXdCLFNBQUMsS0FBRDtRQUN0QixJQUFJLENBQUMsS0FBTCxDQUFXLG1DQUFBLEdBQXNDLE9BQU8sQ0FBQyxNQUFSLENBQWUsS0FBSyxDQUFDLElBQXJCLEVBQTJCLElBQTNCLENBQWpEO01BRHNCO01BSXhCLElBQUcsQ0FBQyxLQUFKO1FBQ0UsS0FBQSxHQUFRLEdBRFY7O2FBRUEsS0FBSyxDQUFDLEdBQU4sQ0FBVSxPQUFBLEdBQVUseUJBQVYsR0FBc0MsS0FBaEQsQ0FBc0QsQ0FBQyxJQUF2RCxDQUE0RCx1QkFBNUQsQ0FBb0YsQ0FBQyxPQUFELENBQXBGLENBQTJGLHFCQUEzRjtJQVhnQjtXQWFsQixPQUFBLEdBQ0U7TUFBQSxPQUFBLEVBQVMsT0FBVDtNQUNBLGVBQUEsRUFBaUIsZUFEakI7O0VBakIwQixDQURoQztBQUFBIiwiZmlsZSI6ImNvbXBvbmVudHMvZ2l0aHViQ29udHJpYnV0b3IvZ2l0aHViQ29udHJpYnV0b3Iuc2VydmljZS5qcyIsInNvdXJjZVJvb3QiOiIvc291cmNlLyIsInNvdXJjZXNDb250ZW50IjpbImFuZ3VsYXIubW9kdWxlIFwic2NyZWVuY2FzdFwiXG4gIC5mYWN0b3J5ICdnaXRodWJDb250cmlidXRvcicsICgkbG9nLCAkaHR0cCkgLT5cbiAgICBhcGlIb3N0ID0gJ2h0dHBzOi8vYXBpLmdpdGh1Yi5jb20vcmVwb3MvU3dpaXAvZ2VuZXJhdG9yLWd1bHAtYW5ndWxhcidcblxuICAgIGdldENvbnRyaWJ1dG9ycyA9IChsaW1pdCkgLT5cblxuICAgICAgZ2V0Q29udHJpYnV0b3JzQ29tcGxldGUgPSAocmVzcG9uc2UpIC0+XG4gICAgICAgIHJlc3BvbnNlLmRhdGFcblxuICAgICAgZ2V0Q29udHJpYnV0b3JzRmFpbGVkID0gKGVycm9yKSAtPlxuICAgICAgICAkbG9nLmVycm9yICdYSFIgRmFpbGVkIGZvciBnZXRDb250cmlidXRvcnMuXFxuJyArIGFuZ3VsYXIudG9Kc29uKGVycm9yLmRhdGEsIHRydWUpXG4gICAgICAgIHJldHVyblxuXG4gICAgICBpZiAhbGltaXRcbiAgICAgICAgbGltaXQgPSAzMFxuICAgICAgJGh0dHAuZ2V0KGFwaUhvc3QgKyAnL2NvbnRyaWJ1dG9ycz9wZXJfcGFnZT0nICsgbGltaXQpLnRoZW4oZ2V0Q29udHJpYnV0b3JzQ29tcGxldGUpLmNhdGNoIGdldENvbnRyaWJ1dG9yc0ZhaWxlZFxuXG4gICAgc2VydmljZSA9XG4gICAgICBhcGlIb3N0OiBhcGlIb3N0XG4gICAgICBnZXRDb250cmlidXRvcnM6IGdldENvbnRyaWJ1dG9yc1xuIl19</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Oct 01 2015 15:27:03 GMT-0300 (BRT)</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>
